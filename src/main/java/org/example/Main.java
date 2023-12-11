@@ -4,6 +4,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.util.Objects;
+
 import static spark.Spark.port;
 import static spark.Spark.post;
 
@@ -31,6 +33,16 @@ public class Main {
             pg.inputFieldIMC.setText(String.format("%.2f",IMC));
 
             return "{\"IMC\":\"" +  String.format("%.2f",IMC) + "\"}";
+
+//            String nomeInserido = pg.inputFieldNome.getText();
+//            String emailInserido = pg.inputFieldEmail.getText();
+//
+//            if (Objects.equals(nomeInserido, emailInserido)) {
+//                return "{\"ack\":\"1\"}";
+//            } else {
+//                return "{\"ack\":\"0\"}";
+//            }
+
         });
     }
 }
